@@ -1,7 +1,18 @@
 import Image from 'next/image'
+import HeroSection from "@/app/_components/HeroSection";
 
 export default function Home() {
+  const heroHeadline = (
+    <>
+      <h1>barrel.</h1>
+      <h1>your.</h1>
+      <h1>happiness.</h1>
+    </>
+  );
+
   return (
-    <main></main>
+    <main>
+      <HeroSection headline={heroHeadline} />
+    </main>
   );
 }
