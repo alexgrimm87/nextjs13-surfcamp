@@ -1,3 +1,5 @@
+import ReactMarkdown from "react-markdown";
+
 const InfoBlock = ({ data }) => {
   const { headline, text, showImageRight, imageSrc, button } = data;
 
@@ -10,7 +12,7 @@ const InfoBlock = ({ data }) => {
       />
       <div className="info__text">
         <h2 className="info__headline">{headline}</h2>
-        {text}
+        <ReactMarkdown className="copy">{text}</ReactMarkdown>
         {button}
       </div>
     </div>
