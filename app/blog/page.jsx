@@ -1,5 +1,6 @@
 import HighlightArticle from "@/app/_components/Blog/HighlightArticle";
 import SubscribeToNewsletter from "@/app/_components/Blog/SubscribeToNewsletter";
+import FeaturedItems from "@/app/_components/FeaturedItems/FeaturedItems";
 
 export default function Page() {
   const highlightArticleData = {
@@ -18,10 +19,56 @@ export default function Page() {
     featuredImage: "/assets/hero-experience.png"
   };
 
+  const featuredArticles = [
+    {
+      headline:
+        "surfboard shaping  let us use proper words to lengthen this headline and design behind the scenes of crafting the perfect board",
+      slug: "/blog/whatever",
+      date: "Monday, 05th of June 2023",
+      featuredImage: "/assets/hero-experience.png"
+    },
+    {
+      headline:
+        "surfboard shaping and design behind the scenes of crafting the perfect board",
+      slug: "/blog/whatever",
+      date: "Monday, 05th of June 2023",
+      featuredImage: "/assets/hero-experience.png"
+    },
+    {
+      headline:
+        "surfboard shaping and design behind the scenes of crafting the perfect board",
+      slug: "/blog/whatever",
+      date: "Monday, 05th of June 2023",
+      featuredImage: "/assets/hero-experience.png"
+    },
+    {
+      headline:
+        "surfboard shaping and design behind the scenes of crafting the perfect board",
+      slug: "/blog/whatever",
+      date: "Monday, 05th of June 2023",
+      featuredImage: "/assets/hero-experience.png"
+    },
+    {
+      headline:
+        "surfboard shaping and design behind the scenes of crafting the perfect board",
+      slug: "/blog/whatever",
+      date: "Monday, 05th of June 2023",
+      featuredImage: "/assets/hero-experience.png"
+    },
+    {
+      headline:
+        "surfboard shaping and design behind the scenes of crafting the perfect board",
+      slug: "/blog/whatever",
+      date: "Monday, 05th of June 2023",
+      featuredImage: "/assets/hero-experience.png"
+    }
+  ];
+
   return (
     <main className="blog-page">
       <HighlightArticle data={highlightArticleData} />
       <SubscribeToNewsletter />
+      <FeaturedItems items={featuredArticles} />
     </main>
   );
 }
