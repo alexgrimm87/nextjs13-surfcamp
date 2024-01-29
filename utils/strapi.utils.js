@@ -40,3 +40,31 @@ function createInfoBlockButton(buttonData) {
     </Link>
   );
 }
+
+export async function fetchBlogArticles() {
+  const blogData = await fetchDataFromStrapi("blog-articles?populate=deep");
+  const processedBlogArticles = blogData.map(processBlogArticle);
+
+  processedBlogArticles.sort(
+    (a, z) => new Date(z.publishedAt) - new Date(a.publishedAt)
+  );
+  return processedBlogArticles;
+}
+
+function processBlogArticle(article) {
+  return {
+    ...article.attributes,
+    id: article.id,
+    featuredImage: BASE_URL + article.attributes?.featuredImage?.data?.attributes?.url
+  };
+}
+
+export function formatDate(dateString) {
+  const date = new Date(dateString);
+  const options = {
+    year: "numeric",
+    month: "long",
+    day: "2-digit"
+  };
+  return date.toLocaleDateString("en-US", options);
+}
