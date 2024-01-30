@@ -1,5 +1,6 @@
 import {fetchBlogArticles, fetchDataFromStrapi} from "@/utils/strapi.utils";
 import ArticleIntro from "@/app/_components/Blog/ArticleIntro";
+import ArticleOverview from "@/app/_components/Blog/ArticleOverview";
 
 export default async function Page({ params }) {
   const { article: slug } = params;
@@ -9,6 +10,9 @@ export default async function Page({ params }) {
   return (
     <main>
       <ArticleIntro article={article} />
+      <section className="article-section">
+        <ArticleOverview article={article} />
+      </section>
     </main>
   );
 }

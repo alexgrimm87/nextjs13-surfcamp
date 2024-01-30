@@ -16,11 +16,11 @@
   }
 
   &__container {
-    & .input {
+    .input {
       display: block;
     }
 
-    & label {
+    label {
       display: block;
       margin-bottom: 1.6rem;
     }
