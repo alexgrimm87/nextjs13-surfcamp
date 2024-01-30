@@ -48,6 +48,7 @@
 
 .article-paragraph {
   margin-bottom: 6rem;
+
   ul {
     margin-top: 2rem;
 
@@ -58,10 +59,9 @@
 }
 
 .article-image {
-  margin: 0 auto;
+  margin: 0 auto 6rem auto;
   width: 65%;
   min-width: 40rem;
-  margin-bottom: 6rem;
 
   img {
     width: 100%;
