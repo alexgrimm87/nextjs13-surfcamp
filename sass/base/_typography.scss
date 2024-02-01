@@ -33,6 +33,16 @@ h5 {
 
 .copy {
   font-size: 2rem;
+
+  ul {
+    li {
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 
 .copy-small {

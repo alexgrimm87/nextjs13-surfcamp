@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ReactMarkdown from "react-markdown";
 
 const ArticleOverview = ({ article }) => {
   const headlines = article.articleContent.filter(
@@ -9,7 +10,9 @@ const ArticleOverview = ({ article }) => {
     <div className="article-overview">
       <div className="article-overview__info">
         <h3 className="article-overview__headline">In this blog</h3>
-        <h5 className="article-overview__excerpt">{article.excerpt}</h5>
+        <h5 className="article-overview__excerpt">
+          <ReactMarkdown>{article.excerpt}</ReactMarkdown>
+        </h5>
       </div>
       <ul className="article-overview__contents">
         {headlines.map((headline, idx) => (
